@@ -13,12 +13,12 @@ export default function Home() {
         </header>
       </div>
       <div className="min-h-screen bg-owlBeige">
-        <div className="flex justify-center min-h-screen">
-          <div className="w-[50%] flex flex-col gap-6">
-            <h2 className="text-3xl ml-20 font-extrabold mt-16">
+        <div className="flex flex-col md:flex-row justify-center min-h-screen">
+          <div className="md:w-[50%] flex flex-col gap-6">
+            <h2 className="text-3xl text-center md:text-left ml-10 mr-10 md:ml-20 lg:ml-36 font-extrabold mt-16">
               What's Academify?
             </h2>
-            <p className="text-lg ml-20">
+            <p className="text-lg text-center md:text-left ml-10 mr-10 md:ml-20 lg:ml-36">
               A new way to access academic resources and papers. A decentralized
               e-commerce platform for high-quality scientific literature without
               the need of third-party institution. A win-win idea that make
@@ -26,18 +26,25 @@ export default function Home() {
               directly.
             </p>
           </div>
-          <div className="w-[50%]">
-            <img src="./whats-academify-icon.png" className="h-96" />
+          <div className="md:w-[50%] flex justify-center">
+            <img src="./whats-academify-icon.png" className="h-96 md:ml-20 md:mr-20 lg:ml-36 lg:mr-36" />
           </div>
         </div>
       </div>
       <div className="min-h-screen bg-backgroundColor">
-        <div className="flex justify-center min-h-screen">
-          <div className="w-[50%]">
-            <img src="./whats-academify-icon.png" className="h-96" />
+        <div className="flex flex-col md:flex-row justify-center min-h-screen">
+          <div className="md:w-[50%] flex justify-center">
+            <img src="./owl-token-icon.png" className="h-96 md:mt-10" />
           </div>
-          <div className="w-[50%]">
-            <h2 className="text-3xl text-center font-extrabold mt-16">Token</h2>
+          <div className="md:w-[50%] flex flex-col gap-6">
+            <h2 className="text-3xl text-center md:text-left md:ml-10 font-extrabold md:mt-16">
+              $OWL Token
+            </h2>
+            <p className="text-lg text-center ml-10 md:ml-10 md:text-left mr-10 lg:mr-20">
+              Purchase your articles with $OWL, the new cryptocurrency of the
+              Academify ecosystem. Request some $OWL with the faucet function and
+              start reading premium quality articles for free.
+            </p>
           </div>
         </div>
       </div>
