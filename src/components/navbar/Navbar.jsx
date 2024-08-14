@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 import { useEffect, useState } from "react";
 
@@ -7,9 +8,9 @@ const Navbar = () => {
   const [walletAddress, setWalletAddress] = useState("");
 
   useEffect(() => {
-    getCurrentWalletConnected()
-    addWalletListener()
-  })
+    getCurrentWalletConnected();
+    addWalletListener();
+  });
 
   const connectWallet = async () => {
     if (typeof window != "undefined" && typeof window.ethereum != "undefined") {
@@ -18,7 +19,6 @@ const Navbar = () => {
           method: "eth_requestAccounts",
         });
         setWalletAddress(accounts[0]);
-        console.log(accounts[0]);
       } catch (err) {
         console.error(err.message);
       }
@@ -35,9 +35,8 @@ const Navbar = () => {
         });
         if (accounts.length > 0) {
           setWalletAddress(accounts[0]);
-          console.log(accounts[0]);
         } else {
-          console.log("Connect to MetaMask using the Connect Wallet button.")
+          console.log("Connect to MetaMask using the Connect Wallet button.");
         }
       } catch (err) {
         console.error(err.message);
@@ -50,27 +49,23 @@ const Navbar = () => {
   const addWalletListener = async () => {
     if (typeof window != "undefined" && typeof window.ethereum != "undefined") {
       window.ethereum.on("accountsChange", (accounts) => {
-        setWalletAddress(accounts[0])
-        console.log(accounts[0])
-      })
+        setWalletAddress(accounts[0]);
+      });
     } else {
-      setWalletAddress("")
+      setWalletAddress("");
       console.log("Please install Metamask");
     }
   };
 
   return (
     <nav className="h-16 w-full flex justify-between items-center fixed bg-backgroundColor shadow-lg">
-      <picture className="h-16">
-        {/*         <source
-          srcSet="./academify-logo-reduced.png"
-          media="(max-width:767px)"
-        /> */}
+      <Link href={"/"} className="h-16">
         <img src="./academify-logo.png" className="h-full px-4" />
-      </picture>
-      <div className="h-[65%] hidden md:flex gap-6">
+      </Link>
+
+      <div className="h-[65%] hidden md:flex gap-6 items-center">
         <button>Partners</button>
-        <button>Articles</button>
+        <Link href={"/articles"}><button>Articles</button></Link>
         <button>Faucet</button>
         <button>Docs</button>
         <button>About</button>
