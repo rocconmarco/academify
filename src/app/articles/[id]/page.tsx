@@ -4,12 +4,13 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import articlesList, { Article } from "@/articles";
 import authorsList, { Author } from "@/authors";
-import Image from "next/image";
+import PurchaseModal from "../../../components/modal/PurchaseModal"
 
 export default function ArticleDetailPage() {
   const params = useParams();
   const [article, setArticle] = useState<Article | null>(null);
   const [author, setAuthor] = useState<Author | null>(null);
+  const [purchaseModalOpen, setPurchaseModalOpen] = useState(false)
 
   useEffect(() => {
     const articleId = Number(params.id);
@@ -32,21 +33,18 @@ export default function ArticleDetailPage() {
     <div className="min-h-screen bg-backgroundColor p-8 px-10 pt-24 flex">
       <div className="w-[65%] mr-32">
         <h1 className="text-4xl font-bold mb-4">{article.title}</h1>
-        {/* <p className="text-xl mb-2">By: {article.author}</p> */}
         <p className="mb-4">{article.summary}</p>
         <p className="mb-4">
           <strong>Price:</strong> {article.price} {article.currency}
         </p>
         <p className="mb-4"><strong>Language:</strong> {article.language}</p>
         <p className="mb-4"><strong>Article type:</strong> {article.articleType}</p>
-        <button className="font-bold border-2 border-black hover:bg-owlBeige p-2 px-4 rounded-xl">
-          <a
-            href={`https://${article.articleCID}.ipfs.w3s.link/`}
-            target="_blank"
-          >
+        <button onClick={() => setPurchaseModalOpen(true)} className="font-bold border-2 border-black hover:bg-owlBeige p-2 px-4 rounded-xl">
             Get Article
-          </a>
         </button>
+        <PurchaseModal handleClose={() => setPurchaseModalOpen(false)} isOpen={purchaseModalOpen} article={article} author={author}>
+          
+        </PurchaseModal>
       </div>
       <div className="w-[35%]">
         {author && (

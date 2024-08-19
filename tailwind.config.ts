@@ -20,7 +20,7 @@ const config: Config = {
         owlLightOrange: "#ff9804",
         owlDarkOrange: "#f67c01",
         owlYellow: "#fec207"
-      }
+      },
     },
   },
   plugins: [],

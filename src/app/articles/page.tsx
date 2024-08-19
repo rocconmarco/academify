@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import ArticleCard from "../../components/articles/ArticleCard";
 import articlesList from "@/articles";
 
 export default function ArticlesPage() {
-  const [articles, setArticles] = useState([]);
   const currentArticlesList = articlesList;
 
   return (

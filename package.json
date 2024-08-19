@@ -12,12 +12,14 @@
     "@web3-storage/w3up-client": "^16.0.0",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-transition-group": "^4.4.11",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

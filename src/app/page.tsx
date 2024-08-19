@@ -81,7 +81,7 @@ export default function Home() {
           </div>
           <div className="md:w-[50%] flex flex-col gap-6">
             <h2 className="text-3xl text-center md:text-left md:ml-10 font-extrabold md:mt-16">
-              $OWL Token
+              $OWL Token (Coming Soon)
             </h2>
             <p className="text-lg text-center ml-10 md:ml-10 md:text-left mr-10 lg:mr-20">
               Purchase your articles with $OWL, the new cryptocurrency of the
