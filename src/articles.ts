@@ -1,4 +1,4 @@
-interface Article {
+export interface Article {
   readonly id: number;
   readonly title: string;
   readonly author: string;
@@ -6,6 +6,7 @@ interface Article {
   readonly price: number;
   readonly currency: string;
   readonly articleType: string;
+  readonly language: string;
   readonly articleCID: string;
 }
 
@@ -20,6 +21,7 @@ const articlesList: Article[] = [
     price: 0.1,
     currency: "$OWL",
     articleType: "essay",
+    language: "italiano",
     articleCID: "bafkreibauk2dj5ttkqi5ipdbd5ce3citx5abv3eyr6ughhjq7verau5zcq"
   },
   {
@@ -32,6 +34,7 @@ const articlesList: Article[] = [
     price: 0.2,
     currency: "$ETH",
     articleType: "essay",
+    language: "italiano",
     articleCID: "bafkreidhwoquqeo4xohtzaskwa2nism7py7qjt2jumgbx7xljb5m6aiy2y"
   },
   {
@@ -44,22 +47,11 @@ const articlesList: Article[] = [
     price: 0.01,
     currency: "$ETH",
     articleType: "essay",
+    language: "italiano",
     articleCID: "bafkreifav64qhnx6pmczcpohkcoxsxdenwyghqwjwpdeu5y56sgom6o2yq"
   },
   {
     id: 4,
-    title:
-      "L'Intelligenza Artificiale nel Settore Sanitario: Opportunità e Sfide",
-    author: "Luca Bianchi",
-    summary:
-      "L'intelligenza artificiale (IA) sta rivoluzionando il settore sanitario, offrendo nuove opportunità per diagnosi più precise, trattamenti personalizzati e una gestione più efficiente delle risorse. Tuttavia, queste innovazioni portano anche nuove sfide, tra cui questioni etiche e la necessità di regolamentazioni adeguate.",
-    price: 0.5,
-    currency: "$ETH",
-    articleType: "essay",
-    articleCID: "bafkreidhwoquqeo4xohtzaskwa2nism7py7qjt2jumgbx7xljb5m6aiy2y"
-  },
-  {
-    id: 5,
     title:
       "The Role of Microbiomes in Human Health",
     author: "Elisa Moretti",
@@ -68,10 +60,11 @@ const articlesList: Article[] = [
     price: 0.3,
     currency: "$OWL",
     articleType: "essay",
+    language: "english",
     articleCID: "bafkreiez2kgh6h75lb2hcy6bxxjw3n4nqtge3zak7aq6gs67sojwdog6ti"
   },
   {
-    id: 6,
+    id: 5,
     title:
       "Quantum Computing: The Next Frontier in Technology",
     author: "Matteo Rossi",
@@ -80,10 +73,11 @@ const articlesList: Article[] = [
     price: 0.2,
     currency: "$ETH",
     articleType: "essay",
+    language: "english",
     articleCID: "bafkreiazaoc2i3mezq3vw7nsjsrgjtyiem3vedholfpklt37543mwuls7m"
   },
   {
-    id: 7,
+    id: 6,
     title:
       "The Impact of Climate Change on Marine Ecosystems",
     author: "Laura Bianchi",
@@ -92,10 +86,11 @@ const articlesList: Article[] = [
     price: 0.7,
     currency: "$ETH",
     articleType: "essay",
+    language: "english",
     articleCID: "bafkreih5drwqd32wypswnbb6gpjywzenvloki2mt6rkjk5zoou3klyhv4e"
   },
   {
-    id: 8,
+    id: 7,
     title:
       "The Future of Renewable Energy: Challenges and Opportunities",
     author: "Roberto Conti",
@@ -104,10 +99,11 @@ const articlesList: Article[] = [
     price: 0.1,
     currency: "$ETH",
     articleType: "essay",
+    language: "english",
     articleCID: "bafkreiediiot5ngyrsfi3435mjgzadgtyh3xghgaebpsu5z3btwo3p3cem"
   },
   {
-    id: 9,
+    id: 8,
     title:
       "Artificial Intelligence in Medicine: Transforming Healthcare",
     author: "Giulia Romano",
@@ -116,10 +112,11 @@ const articlesList: Article[] = [
     price: 0.4,
     currency: "$ETH",
     articleType: "essay",
+    language: "english",
     articleCID: "bafkreibmdzwirii6jdlwohub2wje2qsv4nstopprysyleltchshomo5svy"
   },
   {
-    id: 10,
+    id: 9,
     title:
       "Le Ultime Scoperte nella Ricerca sulle Cellule Staminali",
     author: "Andrea Bellini",
@@ -128,10 +125,11 @@ const articlesList: Article[] = [
     price: 0.3,
     currency: "$ETH",
     articleType: "essay",
+    language: "italiano",
     articleCID: "bafkreifzgcknqz7uicwqwvsbuu3vlxwl5lbkylxigcide5kxrb4gapq3ly"
   },
   {
-    id: 11,
+    id: 10,
     title:
       "L'Influenza della Dieta sulla Prevenzione delle Malattie Cardiovascolari",
     author: "Sara Greco",
@@ -140,10 +138,11 @@ const articlesList: Article[] = [
     price: 0.8,
     currency: "$ETH",
     articleType: "essay",
+    language: "italiano",
     articleCID: "bafkreihf6g3mtvjvrokvugb33x4iy5eev56zzxoak3q4diay6gzhdbynoq"
   },
   {
-    id: 12,
+    id: 11,
     title:
       "L'Impatto delle Tecnologie Digitali sull'Istruzione Superiore",
     author: "Luca Morelli",
@@ -152,10 +151,11 @@ const articlesList: Article[] = [
     price: 0.9,
     currency: "$ETH",
     articleType: "essay",
+    language: "italiano",
     articleCID: "bafkreibs73225el6xkjghncca3evtuoxwmpoqn44kb7yiq7eke7u6cdv2m"
   },
   {
-    id: 13,
+    id: 12,
     title:
       "I Benefici della Meditazione sulla Salute Mentale",
     author: "Federica Martelli",
@@ -164,10 +164,11 @@ const articlesList: Article[] = [
     price: 0.6,
     currency: "$ETH",
     articleType: "essay",
+    language: "italiano",
     articleCID: "bafkreih6w7moitopzwk4gxwdbfxnxowlq2tmcgtjbjqmlb642ipnvtskyi"
   },
   {
-    id: 14,
+    id: 13,
     title:
       "Il Futuro delle Energie Rinnovabili nel Contesto della Transizione Energetica",
     author: "Carla Rossi",
@@ -176,6 +177,7 @@ const articlesList: Article[] = [
     price: 0.5,
     currency: "$ETH",
     articleType: "essay",
+    language: "italiano",
     articleCID: "bafkreibdqofsd7klmxqxlkvqie27vmu4w4ppx5kd73llht2gc7eglrhr2e"
   },
 ];

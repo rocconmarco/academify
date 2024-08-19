@@ -64,8 +64,8 @@ const Navbar = () => {
       </Link>
 
       <div className="h-[65%] hidden md:flex gap-6 items-center">
-        <button>Partners</button>
-        <Link href={"/articles"}><button>Articles</button></Link>
+      <Link href={"/articles"}><button>Articles</button></Link>
+        <button>Participate</button>
         <button>Faucet</button>
         <button>Docs</button>
         <button>About</button>

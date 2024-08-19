@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import React from "react";
 
 const ArticleCard = ({article}) => {
@@ -16,8 +17,13 @@ const ArticleCard = ({article}) => {
         </p>
         <p className="text-end pt-4">{article.price} {article.currency}</p>
       </div>
-      <div className="flex justify-center items-center p-4">
-        <button className="font-bold border-2 border-black hover:bg-owlBeige p-2 px-4 rounded-xl"><a href={`https://${article.articleCID}.ipfs.w3s.link/`} target="_blank">Get Article</a></button>
+      <div className="flex justify-center items-center p-4 gap-4">
+        
+        <Link href={`/articles/${article.id}`}>
+          <button className="font-bold border-2 border-black hover:bg-owlBeige p-2 px-4 rounded-xl">
+            View Details
+          </button>
+        </Link>
       </div>
     </div>
   );
