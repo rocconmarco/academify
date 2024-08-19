@@ -13,7 +13,7 @@ const ArticleCard = ({article}) => {
 
         <p className="italic mt-1">{article.author}</p>
         <p className="pt-4">
-          {article.summary}
+          <strong>Abstract: </strong>{article.summary}
         </p>
         <p className="text-end pt-4">{article.price} {article.currency}</p>
       </div>

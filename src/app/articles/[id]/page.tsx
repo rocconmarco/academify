@@ -33,7 +33,7 @@ export default function ArticleDetailPage() {
     <div className="min-h-screen bg-backgroundColor p-8 px-10 pt-24 flex">
       <div className="w-[65%] mr-32">
         <h1 className="text-4xl font-bold mb-4">{article.title}</h1>
-        <p className="mb-4">{article.summary}</p>
+        <p className="mb-4"><strong>Abstract: </strong>{article.summary}</p>
         <p className="mb-4">
           <strong>Price:</strong> {article.price} {article.currency}
         </p>

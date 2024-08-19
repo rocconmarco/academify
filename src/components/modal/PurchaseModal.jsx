@@ -17,8 +17,12 @@ const PurchaseModal = ({ isOpen, handleClose, article, author }) => {
       <div className="fixed inset-0 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0 brightness-[.4] opacity-95 backdrop-filter backdrop-blur-sm pointer-events-none"></div>
         <div className="w-[30%] h-[45%] rounded-lg border-4 border-black shadow-lg z-10 bg-backgroundColor flex flex-col justify-around px-6 pt-4">
-          <div className="-mt-5">
-            <h1 className="text-2xl font-bold">Order details</h1>
+          <div className="-mt-5 flex flex-col">
+            <div className="flex items-center justify-between">
+              <h1 className="text-2xl font-bold mb-2">Order details</h1>
+              <img src="/academify-logo-reduced.png" className="h-12 w-8"></img>
+            </div>
+
             <p>
               <strong>Item:</strong> Article ({article.articleType})
             </p>
@@ -31,7 +35,9 @@ const PurchaseModal = ({ isOpen, handleClose, article, author }) => {
           </div>
 
           <div>
-            <p><strong>Total:</strong> {article.price} {article.currency}</p>
+            <p>
+              <strong>Total:</strong> {article.price} {article.currency}
+            </p>
           </div>
 
           <div className="flex gap-4 justify-center">
