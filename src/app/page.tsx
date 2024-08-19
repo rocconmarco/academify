@@ -45,11 +45,10 @@ export default function Home() {
             </h2>
             <p className="text-lg text-center ml-10 md:ml-10 md:text-left mr-10 lg:mr-20">
               Enjoy direct access to immutable and decentralized content with
-              Academify. Articles are stored on the IPFS network, ensuring
-              that no third parties have rights over them. This setup guarantees
-              full transparency and security, so you can trust that the
-              resources you access are both reliable and free from intermediary
-              control.
+              Academify. Articles are stored on the IPFS network, ensuring that
+              no third parties have rights over them. This setup guarantees full
+              transparency and security, so you can trust that the resources you
+              access are both reliable and free from intermediary control.
             </p>
           </div>
         </div>
@@ -62,9 +61,9 @@ export default function Home() {
             </h2>
             <p className="text-lg text-center md:text-left ml-10 mr-10 md:ml-20 lg:ml-36">
               Give your contribution to the community by quality-checking the
-              articles. Help Academify maintaining premium quality resources
-              through high-standard revisioning and make a second income by
-              earning $OWL.
+              articles. Help Academify maintain premium quality resources
+              through high-standard revisioning and earn $OWL rewards for your
+              efforts.
             </p>
           </div>
           <div className="md:w-[50%] flex justify-center">
