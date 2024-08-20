@@ -30,8 +30,8 @@ function WalletOption({
   }, [connector]);
 
   return (
-    <button disabled={!ready} onClick={onClick} className="w-40 h-16 mx-4 mt-4 rounded-2xl border-2  border-black ">
-      {connector.name}
+    <button disabled={!ready} onClick={onClick} className="px-4 mt-4 mr-4 h-11 border-2 border-black rounded-lg hover:bg-owlBeige ">
+      <strong>{connector.name}</strong>
     </button>
   );
 }
