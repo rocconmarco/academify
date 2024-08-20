@@ -4,13 +4,15 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import articlesList, { Article } from "@/articles";
 import authorsList, { Author } from "@/authors";
-import PurchaseModal from "../../../components/modal/PurchaseModal"
+import PurchaseModal from "../../../components/modal/PurchaseModal";
+import { IoMdArrowBack } from "react-icons/io";
+import { useRouter } from "next/router";
 
 export default function ArticleDetailPage() {
   const params = useParams();
   const [article, setArticle] = useState<Article | null>(null);
   const [author, setAuthor] = useState<Author | null>(null);
-  const [purchaseModalOpen, setPurchaseModalOpen] = useState(false)
+  const [purchaseModalOpen, setPurchaseModalOpen] = useState(false);
 
   useEffect(() => {
     const articleId = Number(params.id);
@@ -32,19 +34,36 @@ export default function ArticleDetailPage() {
   return (
     <div className="min-h-screen bg-backgroundColor p-8 px-10 pt-24 flex">
       <div className="w-[65%] mr-32">
+        <button onClick={() => window.history.back()}>
+          <IoMdArrowBack className="text-2xl" />
+        </button>
+
         <h1 className="text-4xl font-bold mb-4">{article.title}</h1>
-        <p className="mb-4"><strong>Abstract: </strong>{article.summary}</p>
+        <p className="mb-4">
+          <strong>Abstract: </strong>
+          {article.summary}
+        </p>
         <p className="mb-4">
           <strong>Price:</strong> {article.price} {article.currency}
         </p>
-        <p className="mb-4"><strong>Language:</strong> {article.language}</p>
-        <p className="mb-4"><strong>Article type:</strong> {article.articleType}</p>
-        <button onClick={() => setPurchaseModalOpen(true)} className="font-bold border-2 border-black hover:bg-owlBeige p-2 px-4 rounded-xl">
-            Get Article
+        <p className="mb-4">
+          <strong>Language:</strong> {article.language}
+        </p>
+        <p className="mb-4">
+          <strong>Article type:</strong> {article.articleType}
+        </p>
+        <button
+          onClick={() => setPurchaseModalOpen(true)}
+          className="font-bold border-2 border-black hover:bg-owlBeige p-2 px-4 rounded-xl"
+        >
+          Get Article
         </button>
-        <PurchaseModal handleClose={() => setPurchaseModalOpen(false)} isOpen={purchaseModalOpen} article={article} author={author}>
-          
-        </PurchaseModal>
+        <PurchaseModal
+          handleClose={() => setPurchaseModalOpen(false)}
+          isOpen={purchaseModalOpen}
+          article={article}
+          author={author}
+        ></PurchaseModal>
       </div>
       <div className="w-[35%]">
         {author && (
@@ -53,14 +72,14 @@ export default function ArticleDetailPage() {
               {author.firstName} {author.lastName}
             </h2>
             <div className="flex justify-center">
-            <img
-              src={`/authors/${author.firstName}-${author.lastName}.jpg`}
-              alt={`${author.firstName} ${author.lastName}`}
-              width={300}
-              height={300}
-              loading="lazy"
-              className="rounded-full mt-4"
-            />
+              <img
+                src={`/authors/${author.firstName}-${author.lastName}.jpg`}
+                alt={`${author.firstName} ${author.lastName}`}
+                width={300}
+                height={300}
+                loading="lazy"
+                className="rounded-full mt-4"
+              />
             </div>
             <p className="mt-6 text-wrap">{author.bio}</p>
           </div>

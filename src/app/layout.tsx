@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "../components/navbar/Navbar.jsx"
+import Navbar from "../components/navbar/Navbar.jsx";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Academify",
-  description: "Top-level knowledge shared by the most authoritative sources, powered by blockchain technology.",
+  description:
+    "Top-level knowledge shared by the most authoritative sources, powered by blockchain technology.",
 };
 
 export default function RootLayout({
@@ -19,8 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
-        {children}
-        </body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
