@@ -2,60 +2,12 @@
 
 import Link from "next/link";
 import React from "react";
-import { useEffect, useState } from "react";
+import { useAccount } from "wagmi";
+
+
 
 const Navbar = () => {
-  /* const [walletAddress, setWalletAddress] = useState("");
-
-  useEffect(() => {
-    getCurrentWalletConnected();
-    addWalletListener();
-  });
-
-  const connectWallet = async () => {
-    if (typeof window != "undefined" && typeof window.ethereum != "undefined") {
-      try {
-        const accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        setWalletAddress(accounts[0]);
-      } catch (err) {
-        console.error(err.message);
-      }
-    } else {
-      console.log("Please install Metamask");
-    }
-  };
-
-  const getCurrentWalletConnected = async () => {
-    if (typeof window != "undefined" && typeof window.ethereum != "undefined") {
-      try {
-        const accounts = await window.ethereum.request({
-          method: "eth_accounts",
-        });
-        if (accounts.length > 0) {
-          setWalletAddress(accounts[0]);
-        } else {
-          console.log("Connect to MetaMask using the Connect Wallet button.");
-        }
-      } catch (err) {
-        console.error(err.message);
-      }
-    } else {
-      console.log("Please install Metamask");
-    }
-  };
-
-  const addWalletListener = async () => {
-    if (typeof window != "undefined" && typeof window.ethereum != "undefined") {
-      window.ethereum.on("accountsChange", (accounts) => {
-        setWalletAddress(accounts[0]);
-      });
-    } else {
-      setWalletAddress("");
-      console.log("Please install Metamask");
-    }
-  }; */
+  const { isConnected, address } = useAccount();
 
   return (
     <nav className="h-16 w-full flex justify-between items-center fixed bg-backgroundColor shadow-lg">
@@ -71,18 +23,16 @@ const Navbar = () => {
         <button>Faucet</button>
         <button>Docs</button>
         <button>About</button>
-        <Link href={"/connect-wallet"}>
+        <Link href={"/account"}>
           <button
-            /* onClick={connectWallet} */
             className="px-4 mr-4 h-11 border-2 border-black rounded-lg hover:bg-owlBeige"
           >
-            Connect Wallet
-            {/* {walletAddress && walletAddress.length > 0
-            ? `Connected: ${walletAddress.substring(
+            {isConnected
+            ? `Connected: ${address.substring(
                 0,
                 6
-              )}...${walletAddress.substring(38)}`
-            : "Connect Wallet"} */}
+              )}...${address.substring(38)}`
+            : "Connect Wallet"}
           </button>
         </Link>
       </div>
