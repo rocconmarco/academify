@@ -8,7 +8,7 @@ export function Account() {
   const {data: balanceData, isLoading: balanceLoading} = useBalance({address: address})
 
   return (
-    <div>
+    <div className="">
       {ensAvatar && <img alt="ENS Avatar" src={ensAvatar} />}
       <h2 className="font-bold text-lg">Address:</h2>
       {address && (

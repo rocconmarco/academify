@@ -6,7 +6,6 @@ import articlesList, { Article } from "@/articles";
 import authorsList, { Author } from "@/authors";
 import PurchaseModal from "../../../components/modal/PurchaseModal";
 import { IoMdArrowBack } from "react-icons/io";
-import { useRouter } from "next/router";
 
 export default function ArticleDetailPage() {
   const params = useParams();

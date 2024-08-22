@@ -1,7 +1,42 @@
-import React, { useEffect } from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import ReactPortal from "./ReactPortal";
+import abi from "../../abis/AcademifyPaymentManager.json";
+import contractAddresses from "../../smart-contracts-config/contractAddresses";
+import { useAccount, useWriteContract } from "wagmi";
+import { sepolia } from "viem/chains";
+import { parseEther } from "ethers";
+import Link from "next/link";
 
 const PurchaseModal = ({ isOpen, handleClose, article, author }) => {
+  const [started, setStarted] = useState(false);
+  const [errors, setErrors] = useState();
+  const [completed, setCompleted] = useState(false);
+  const { isConnected } = useAccount();
+  const { writeContractAsync } = useWriteContract();
+
+  const handlePayment = async () => {
+    try {
+      setErrors("");
+      setStarted(true);
+
+      const data = await writeContractAsync({
+        chainId: sepolia.id,
+        address: contractAddresses.AcademifyPaymentManager,
+        functionName: "buyArticle",
+        abi: abi,
+        args: [],
+        value: parseEther(article.price.toString()),
+      });
+      setCompleted(true);
+    } catch (err) {
+      console.log(err);
+      setStarted(false);
+      setErrors("Payment failed. Please try again.");
+    }
+  };
+
   useEffect(() => {
     const closeOnEscapeKey = (e) => (e.key === "Escape" ? handleClose() : null);
     document.body.addEventListener("keydown", closeOnEscapeKey);
@@ -47,9 +82,23 @@ const PurchaseModal = ({ isOpen, handleClose, article, author }) => {
             >
               Cancel
             </button>
-            <button className="font-bold border-2 border-black hover:bg-owlBeige p-2 px-4 rounded-xl">
-              Buy now ({article.price} {article.currency})
-            </button>
+            {isConnected ? (
+              !completed && (
+                <button
+                  disabled={started}
+                  className="font-bold border-2 border-black hover:bg-owlBeige p-2 px-4 rounded-xl"
+                  onClick={handlePayment}
+                >
+                  {started ? "Confirming..." : `Buy now ${article.price} ${article.currency}`}
+                </button>
+              )
+            ) : (
+              <Link href="/account">
+                <button className="font-bold border-2 border-black hover:bg-owlBeige p-2 px-4 rounded-xl">
+                  Connect Wallet to Buy
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
