@@ -1,18 +1,79 @@
+"use client";
+
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { useCallback } from "react";
+
+export function EmblaCarousel() {
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true } /* [
+    Autoplay({ delay: 5000 }),
+  ] */
+  );
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  return (
+    <div className="embla -z-10">
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container">
+          <div className="embla__slide">
+            <img src="/hero-images/hero-image-1.webp" /* loading="lazy" */ />
+          </div>
+          <div className="embla__slide">
+            <img src="/hero-images/hero-image-2.webp" /* loading="lazy" */ />
+          </div>
+          <div className="embla__slide">
+            <img src="/hero-images/hero-image-3.webp" /* loading="lazy" */ />
+          </div>
+          <div className="embla__slide">
+            <img src="/hero-images/hero-image-4.webp" /* loading="lazy" */ />
+          </div>
+          <div className="embla__slide">
+            <img src="/hero-images/hero-image-5.webp" /* loading="lazy" */ />
+          </div>
+        </div>
+      </div>
+      <div>
+        <button className="embla__prev" onClick={scrollPrev}>
+          Prev
+        </button>
+        <button className="embla__next" onClick={scrollNext}>
+          Next
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen flex items-center justify-center px-2 sm:px-20 xl:px-28 bg-backgroundColor">
-        <header className="flex flex-col gap-6">
-          <h1 className="text-4xl md:text-6xl text-center font-extrabold">
-            Premium knowledge for everyone
-          </h1>
-          <p className="text-lg font-light md:text-xl text-center lg:px-36">
-            Breaking down traditional barriers to high-quality education through
-            the security and transparency of blockchain technology.
-          </p>
-        </header>
+      <div className="relative">
+        <EmblaCarousel />
+        <div className="absolute top-0 left-0 w-full h-full z-0 bg-black bg-opacity-50">
+          <div className="absolute inset-0 bg-gradient-radial from-black/50 via-black/20 to-white/10"></div>
+        </div>
+        <div className="min-h-screen flex flex-col items-center justify-center px-2 sm:px-20 xl:px-28 absolute top-0 z-10">
+          <header className="flex flex-col gap-6 text-white">
+            <h1 className="text-4xl md:text-6xl text-center font-extrabold">
+              Premium knowledge for <span className="text-[#ffe0B3]">everyone</span>
+            </h1>
+            <p className="text-lg font-semibold md:text-xl text-center lg:px-36">
+              Breaking down traditional barriers to <span className="text-[#ffe0B3]">high-quality education </span>
+              through the security and transparency of <span className="text-[#ffe0B3]">blockchain technology</span>.
+            </p>
+          </header>
+        </div>
       </div>
-      <div className="min-h-screen bg-owlBeige">
+
+      {/* <div className="min-h-screen bg-owlBeige">
         <div className="flex flex-col md:flex-row justify-center min-h-screen">
           <div className="md:w-[50%] flex flex-col gap-6">
             <h2 className="text-3xl text-center md:text-left ml-10 mr-10 md:ml-20 lg:ml-36 font-extrabold mt-16">
@@ -90,7 +151,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

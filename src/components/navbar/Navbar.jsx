@@ -10,7 +10,7 @@ const Navbar = () => {
   const { isConnected, address } = useAccount();
 
   return (
-    <nav className="h-16 w-full flex justify-between items-center fixed bg-backgroundColor shadow-lg">
+    <nav className="h-16 w-full flex justify-between items-center fixed bg-backgroundColor shadow-lg z-50">
       <Link href={"/"} className="h-16">
         <img src="./academify-logo.png" className="h-full px-4" />
       </Link>

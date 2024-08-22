@@ -8,7 +8,7 @@ export default function ArticlesPage() {
   const currentArticlesList = articlesList;
 
   return (
-    <div className="min-h-screen bg-backgroundColor">
+    <div className="min-h-screen bg-backgroundColor pb-10">
       <div className="flex justify-center">
         <h1 className="pt-24 text-4xl font-extrabold">Articles</h1>
       </div>
