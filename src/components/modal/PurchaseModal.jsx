@@ -108,19 +108,18 @@ const PurchaseModal = ({ isOpen, handleClose, article, author }) => {
       ) : (
         <div className="fixed inset-0 flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0 brightness-[.4] opacity-95 backdrop-filter backdrop-blur-sm pointer-events-none"></div>
-          <div className="w-[30%] h-[45%] rounded-lg border-4 border-black shadow-lg z-10 bg-backgroundColor flex flex-col justify-around px-6 pt-4">
+          <div className="w-[30%] h-[37%] rounded-lg border-4 border-black shadow-lg z-10 bg-backgroundColor flex flex-col justify-evenly px-6 pt-4">
             <div className="-mt-5 flex flex-col">
-              <div className="flex items-center justify-between">
-                <h1 className="text-2xl font-bold mb-2">Success</h1>
-                <img src="/academify-logo-reduced.png" className="h-12 w-8" />
+              <div className="flex items-center">
+                <h1 className="text-2xl font-bold mb-2">Payment Successful! 🎉
+                </h1>
               </div>
-
-              <p>You have successfully purchased your article</p>
+              <p className="text-start">Thank you for supporting Academify and the community of independent researchers.</p>
             </div>
 
             <div className="flex gap-4 justify-center">
-              <Link href={`https://${article.articleCID}.ipfs.w3s.link`}>
-                <button className="font-bold border-2 border-black hover:bg-owlBeige p-2 px-4 rounded-xl">
+              <Link href={`https://${article.articleCID}.ipfs.w3s.link`} target="_blank">
+                <button onClick={handleClose} className="font-bold border-2 border-black hover:bg-owlBeige p-2 px-4 rounded-xl">
                   Read article
                 </button>
               </Link>
