@@ -1,14 +1,13 @@
 "use client";
 
 import EmblaCarousel from "../components/carousel/EmblaCarousel";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Home() {
   return (
     <>
-      <div className="relative">
+      {/* <div className="relative"> */}
         <EmblaCarousel />
-        <div className="absolute top-0 left-0 w-full h-full z-0 bg-black bg-opacity-50 pointer-events-none">
+        {/* <div className="absolute top-0 left-0 w-full h-full z-0 bg-black bg-opacity-50 pointer-events-none">
           <div className="absolute inset-0 bg-gradient-radial from-black/50 via-black/20 to-white/10 pointer-events-none">
             <div className="flex w-full h-full items-center justify-between px-6 z-[999]"></div>
           </div>
@@ -38,7 +37,7 @@ export default function Home() {
           
         </div>
       </div>
-
+ */}
       {/* <div className="min-h-screen bg-owlBeige">
         <div className="flex flex-col md:flex-row justify-center min-h-screen">
           <div className="md:w-[50%] flex flex-col gap-6">
