@@ -40,7 +40,7 @@ function WalletOption({
     <button
       disabled={!ready}
       onClick={onClick}
-      className="px-4 mt-4 mr-4 h-12 border-2 border-black rounded-lg hover:bg-owlBeige "
+      className="px-4 mt-4 mr-4 h-12 border-2 border-black rounded-lg hover:bg-owlBeige"
     >
       <div className="flex items-center">
         <div className="flex items-center justify-start gap-2 w-72">

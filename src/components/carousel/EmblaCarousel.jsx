@@ -3,9 +3,12 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback } from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function EmblaCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 10000 }),
+  ]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -159,13 +162,13 @@ export default function EmblaCarousel() {
       </div>
 
       <button
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-40"
+        className="absolute left-1 md:left-4 top-1/2 transform -translate-y-1/2 z-40"
         onClick={scrollPrev}
       >
         <ChevronLeft size={40} color="white" />
       </button>
       <button
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-40"
+        className="absolute right-1 md:right-4 top-1/2 transform -translate-y-1/2 z-40"
         onClick={scrollNext}
       >
         <ChevronRight size={40} color="white" />

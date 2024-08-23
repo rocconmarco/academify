@@ -4,8 +4,6 @@ import Link from "next/link";
 import React from "react";
 import { useAccount } from "wagmi";
 
-
-
 const Navbar = () => {
   const { isConnected, address } = useAccount();
 
@@ -19,20 +17,22 @@ const Navbar = () => {
         <Link href={"/articles"}>
           <button>Articles</button>
         </Link>
-        <button>Participate</button>
-        <button>Faucet</button>
-        <button>Docs</button>
-        <button>About</button>
+        <Link href={"/certify"}>
+          <button>Certify</button>
+        </Link>
+        <Link href={"/publish"}>
+          <button>Publish</button>
+        </Link>
+        <Link href={"/about"}>
+          <button>About</button>
+        </Link>
         <Link href={"/account"}>
-          <button
-            className="px-4 mr-4 h-11 border-2 border-black rounded-lg hover:bg-owlBeige"
-          >
+          <button className="px-4 mr-4 h-11 border-2 border-black rounded-lg hover:bg-owlBeige">
             {isConnected
-            ? `Connected: ${address.substring(
-                0,
-                6
-              )}...${address.substring(38)}`
-            : "Connect Wallet"}
+              ? `Connected: ${address.substring(0, 6)}...${address.substring(
+                  38
+                )}`
+              : "Connect Wallet"}
           </button>
         </Link>
       </div>

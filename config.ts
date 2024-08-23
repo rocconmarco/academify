@@ -2,7 +2,7 @@ import { http, createConfig } from "wagmi";
 import { mainnet, sepolia } from "wagmi/chains";
 import { coinbaseWallet, metaMask, safe, walletConnect } from "wagmi/connectors";
 
-const projectId = "ca9907de3a1896e533892de8384b4e5f";
+const projectId: string = process.env.NEXT_PUBLIC_PROJECT_ID!;
 
 export const config = createConfig({
   chains: [mainnet, sepolia],
