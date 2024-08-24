@@ -3,6 +3,8 @@
 import Link from "next/link";
 import React from "react";
 import { useAccount } from "wagmi";
+import Dropdown from "../dropdown/Dropdown";
+import DropdownItem from "../dropdown/DropdownItem";
 
 const Navbar = () => {
   const { isConnected, address } = useAccount();
@@ -36,8 +38,36 @@ const Navbar = () => {
           </button>
         </Link>
       </div>
-      <div className="md:hidden px-4">
-        <img src="./burger-menu-icon.png" className="h-12" />
+      <div className="md:hidden w-full absolute">
+        {/* <img src="./burger-menu-icon.png" className="h-12" /> */}
+        <Dropdown
+          content={
+            <>
+              <Link href={"/articles"}>
+                <DropdownItem>Articles</DropdownItem>
+              </Link>
+              <Link href={"/certify"}>
+                <DropdownItem>Certify</DropdownItem>
+              </Link>
+              <Link href={"/publish"}>
+                <DropdownItem>Publish</DropdownItem>
+              </Link>
+              <Link href={"/about"}>
+                <DropdownItem>About</DropdownItem>
+              </Link>
+              <Link href={"/account"}>
+                <DropdownItem>
+                  {isConnected
+                    ? `Connected: ${address.substring(
+                        0,
+                        6
+                      )}...${address.substring(38)}`
+                    : "Connect Wallet"}
+                </DropdownItem>
+              </Link>
+            </>
+          }
+        />
       </div>
     </nav>
   );

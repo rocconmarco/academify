@@ -5,7 +5,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="h-16 w-full flex items-center justify-center bg-black shadow-lg">
+    <footer className="h-14 md:h-16 w-full flex items-center justify-center bg-black shadow-lg">
       <Link
         href={"https://rocconmarco.github.io/"}
         className="h-full"
@@ -14,7 +14,7 @@ const Footer = () => {
         <img className="h-full" src="/alternative-logo-reduced.svg" />
       </Link>
 
-      <h1 className="text-white text-center">
+      <h1 className="text-white text-center text-sm md:text-md">
         © 2024 Marco Roccon. All rights reserved.
       </h1>
     </footer>
