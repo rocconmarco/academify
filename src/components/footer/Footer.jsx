@@ -14,7 +14,7 @@ const Footer = () => {
         <img className="h-full" src="/alternative-logo-reduced.svg" />
       </Link>
 
-      <h1 className="text-white text-center text-sm md:text-md">
+      <h1 className="text-white text-center text-sm md:text-[16px]">
         © 2024 Marco Roccon. All rights reserved.
       </h1>
     </footer>
