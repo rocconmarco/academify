@@ -6,6 +6,7 @@ import articlesList, { Article } from "@/articles";
 import authorsList, { Author } from "@/authors";
 import PurchaseModal from "../../../components/modal/PurchaseModal";
 import { IoMdArrowBack } from "react-icons/io";
+import Image from "next/image";
 
 export default function ArticleDetailPage() {
   const params = useParams();
@@ -31,7 +32,7 @@ export default function ArticleDetailPage() {
   if (!article) return <div>Article not found</div>;
 
   return (
-    <div className="min-h-screen bg-backgroundColor p-8 px-10 pt-24 flex flex-col lg:flex-row">
+    <div className="min-h-screen bg-backgroundColor p-8 px-8 lg:px-10 pt-24 flex flex-col lg:flex-row">
       <div className="w-full lg:w-[65%] lg:mr-32">
         <button onClick={() => window.history.back()}>
           <IoMdArrowBack className="text-2xl" />
@@ -71,12 +72,11 @@ export default function ArticleDetailPage() {
               {author.firstName} {author.lastName}
             </h2>
             <div className="flex justify-center">
-              <img
+              <Image
                 src={`/authors/${author.firstName}-${author.lastName}.jpg`}
                 alt={`${author.firstName} ${author.lastName}`}
                 width={300}
                 height={300}
-                loading="lazy"
                 className="rounded-full mt-4"
               />
             </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -11,7 +12,7 @@ const Footer = () => {
         className="h-full"
         target="_blank"
       >
-        <img className="h-full" src="/alternative-logo-reduced.svg" />
+        <Image className="h-14 md:h-16" src="/alternative-logo-reduced.svg" alt="Marco Roccon" height={64} width={64} />     
       </Link>
 
       <h1 className="text-white text-center text-sm md:text-[16px]">

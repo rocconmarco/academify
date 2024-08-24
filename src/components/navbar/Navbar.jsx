@@ -5,6 +5,7 @@ import React from "react";
 import { useAccount } from "wagmi";
 import Dropdown from "../dropdown/Dropdown";
 import DropdownItem from "../dropdown/DropdownItem";
+import Image from "next/image";
 
 const Navbar = () => {
   const { isConnected, address } = useAccount();
@@ -12,7 +13,13 @@ const Navbar = () => {
   return (
     <nav className="h-16 w-full flex justify-between items-center fixed bg-backgroundColor shadow-lg z-50">
       <Link href={"/"} className="h-16">
-        <img src="./academify-logo.png" className="h-full px-4" />
+        <Image
+          className="h-full px-4"
+          src="/academify-logo.png"
+          alt="Academify logo"
+          width={220}
+          height={64}
+        />
       </Link>
 
       <div className="h-[65%] hidden md:flex gap-6 items-center">
