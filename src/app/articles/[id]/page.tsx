@@ -31,8 +31,8 @@ export default function ArticleDetailPage() {
   if (!article) return <div>Article not found</div>;
 
   return (
-    <div className="min-h-screen bg-backgroundColor p-8 px-10 pt-24 flex">
-      <div className="w-[65%] mr-32">
+    <div className="min-h-screen bg-backgroundColor p-8 px-10 pt-24 flex flex-col lg:flex-row">
+      <div className="w-full lg:w-[65%] lg:mr-32">
         <button onClick={() => window.history.back()}>
           <IoMdArrowBack className="text-2xl" />
         </button>
@@ -64,7 +64,7 @@ export default function ArticleDetailPage() {
           author={author}
         ></PurchaseModal>
       </div>
-      <div className="w-[35%]">
+      <div className="w-full lg:w-[35%]">
         {author && (
           <div className="mt-8">
             <h2 className="text-2xl text-center font-bold mb-2">

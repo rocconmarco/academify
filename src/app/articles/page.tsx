@@ -13,7 +13,7 @@ export default function ArticlesPage() {
         <h1 className="pt-24 text-4xl font-extrabold">Articles</h1>
       </div>
       <div className="flex justify-center mt-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-16">
           {currentArticlesList.map((article, index) => (
             <ArticleCard key={index} article={article} />
           ))}

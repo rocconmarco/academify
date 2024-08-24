@@ -4,11 +4,11 @@ import React from "react";
 
 const ArticleCard = ({article}) => {
   return (
-    <div className="border-4 border-owlBrown shadow-lg rounded-lg w-[20rem] md:w-[35rem]">
+    <div className="border-4 border-owlBrown shadow-lg rounded-lg w-[90vw] sm:w-[35rem]">
       <div className="p-4">
         <div className="flex justify-between">
           <p className="text-3xl font-bold">{article.title}</p>
-          <img src={`./${article.articleType}-icon.png`} className="pr-12 h-56 hidden md:block"></img>
+          <img src={`./${article.articleType}-icon.png`} className="pr-12 h-56 hidden sm:block"></img>
         </div>
 
         <p className="italic mt-1">{article.author}</p>

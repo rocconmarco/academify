@@ -39,7 +39,6 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="md:hidden w-full absolute cursor-pointer">
-        {/* <img src="./burger-menu-icon.png" className="h-12" /> */}
         <Dropdown
           content={
             <>
