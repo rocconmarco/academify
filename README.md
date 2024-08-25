@@ -80,7 +80,7 @@ What you see now is just a basic MVP of the platform, showcasing its
             
 <br>
 
-If you’re interested in the project, feel free to contact me via the "Contacts" form in <a href="https://rocconmarco.github.io/" target="_blank">my portfolio website<a>.
+If you’re interested in the project, feel free to contact me via the "Contacts" form in <a href="https://rocconmarco.github.io/">my portfolio website<a>.
 
 <br>
 
