@@ -20,13 +20,13 @@ This project was conceived and developed as part of the "Typescript,
             React, and Web3" course in the Master’s program in Blockchain
             Development at start2impact University. The initial goal was to
             create a <strong>decentralized application</strong> that would
-            enable users to purchase products using{" "}
+            enable users to purchase products using 
             <strong>blockchain payments</strong>.
 
 <br>
 
 From there, I expanded the project to imagine a platform that allows
-            everyone to{" "}
+            everyone to 
             <strong>freely access high-quality scientific articles</strong>{" "}
             through the blockchain. Today, research materials are often locked
             behind paywalls or restricted to university staff, making them hard
@@ -35,12 +35,12 @@ From there, I expanded the project to imagine a platform that allows
 <br>
 
 Academify aims to change this by making all articles available to
-            the public while ensuring the{" "}
+            the public while ensuring the 
             <strong>reliability of the information</strong>.
 
 <br>
 
-In the first phase of development, I focused on building the{" "}
+In the first phase of development, I focused on building the 
             <strong>core features</strong>: saving and displaying articles,
             connecting to the blockchain, and enabling payment and access to the
             final content.
@@ -58,7 +58,7 @@ What you see now is just a basic MVP of the platform, showcasing its
             
 <br>
 
-The goal is to make the platform even more inclusive by{" "}
+The goal is to make the platform even more inclusive by 
             <strong>introducing roles</strong> that contribute to the
             ecosystem's integrity. For instance, the role of certifier will be
             crucial. Certifiers are selected users who review articles submitted
@@ -67,7 +67,7 @@ The goal is to make the platform even more inclusive by{" "}
             
 <br>
 
-To reward certifiers for their work, I plan to introduce{" "}
+To reward certifiers for their work, I plan to introduce 
             <strong>a token called $OWL</strong> (inspired by the Academify
             logo). Certifiers can earn these tokens through their activities,
             and users who purchase articles will also earn them as a form of
