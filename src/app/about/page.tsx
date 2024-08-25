@@ -74,7 +74,7 @@ const AboutPage = () => {
           <p className="w-full sm:w-[80%] md:w-[65%] lg:w-[55%] py-4">
             If you’re interested in the project, feel free to visit{" "}
             <a
-              className="text-[#f67c01]"
+              className="text-[#f67c01] hover:underline"
               href="https://rocconmarco.github.io/"
               target="_blank"
             >
