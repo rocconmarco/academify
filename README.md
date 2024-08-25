@@ -27,7 +27,7 @@ This project was conceived and developed as part of the "Typescript,
 
 From there, I expanded the project to imagine a platform that allows
             everyone to 
-            <strong>freely access high-quality scientific articles</strong>{" "}
+            <strong>freely access high-quality scientific articles</strong> 
             through the blockchain. Today, research materials are often locked
             behind paywalls or restricted to university staff, making them hard
             for the general public to access.
