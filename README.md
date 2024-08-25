@@ -1,7 +1,7 @@
 <br />
 <div id="readme-top" align="center">
   <a href="https://academify-self.vercel.app/">
-    <img src="/academify-logo-blank.png" alt="Logo" width="130" height="130">
+    <img src="./academify-logo-blank.png" alt="Logo" width="130" height="130">
   </a>
 
 <h3 align="center">Academify</h3>
