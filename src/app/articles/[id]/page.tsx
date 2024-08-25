@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import articlesList, { Article } from "@/articles";
 import authorsList, { Author } from "@/authors";

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ReactPortal from "./ReactPortal";
 import abi from "../../abis/AcademifyPaymentManager.json";
 import contractAddresses from "../../smart-contracts-config/contractAddresses";

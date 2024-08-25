@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useAccount } from "wagmi";
 import { Account } from "../../components/wallet/account";
 import { WalletOptions } from "../../components/wallet/wallet-options";

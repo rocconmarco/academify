@@ -1,4 +1,3 @@
-import React from "react";
 import ArticleCard from "../../components/articles/ArticleCard";
 import articlesList from "@/articles";
 import { Metadata } from "next";

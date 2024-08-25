@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import DropdownButton from "./DropdownButton";
 import DropdownContent from "./DropdownContent";
 
