@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Breaking down traditional barriers to high-quality education through the security and transparency of blockchain technology.",
     openGraph: {
-      url:"",
+      url:"https://academify-self.vercel.app/",
       type:"website",
       title:"Academify",
       description:"Breaking down traditional barriers to high-quality education through the security and transparency of blockchain technology.",
