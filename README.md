@@ -7,7 +7,7 @@
 <h3 align="center">Academify</h3>
 
   <p align="center">
-    Breaking down traditional barriers to high-quality education through the security and transparency of blockchain technology.
+    Breaking down traditional barriers to high-quality education<br /> through the security and transparency of blockchain technology.
     <br />
     <a href="https://github.com/rocconmarco/academify"><strong>Repository GitHub »</strong></a>
     <br />
