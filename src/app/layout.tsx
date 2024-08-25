@@ -10,7 +10,32 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Academify",
   description:
-    "Top-level knowledge shared by the most authoritative sources, powered by blockchain technology.",
+    "Breaking down traditional barriers to high-quality education through the security and transparency of blockchain technology.",
+    openGraph: {
+      url:"",
+      type:"website",
+      title:"Academify",
+      description:"Breaking down traditional barriers to high-quality education through the security and transparency of blockchain technology.",
+      images: [
+        {
+          url:"/opengraph-image.png",
+          width: 1200,
+          height: 630,
+          alt: "Academify OpenGraph Image",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Academify",
+      description: "Breaking down traditional barriers to high-quality education through the security and transparency of blockchain technology.",
+      images: [
+        {
+          url:"/opengraph-image.png",
+          alt: "Academify Twitter Image",
+        }
+      ] 
+    }
 };
 
 export default function RootLayout({
