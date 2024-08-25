@@ -1,5 +1,12 @@
 import Link from "next/link";
 import React from "react";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Page not found - Academify",
+    description:
+      "Top-level knowledge shared by the most authoritative sources, powered by blockchain technology.",
+  };
 
 const NotFoundPage = () => {
   return (

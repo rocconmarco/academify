@@ -1,8 +1,13 @@
-"use client";
-
 import React from "react";
 import ArticleCard from "../../components/articles/ArticleCard";
 import articlesList from "@/articles";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Articles - Academify",
+  description:
+    "Top-level knowledge shared by the most authoritative sources, powered by blockchain technology.",
+};
 
 export default function ArticlesPage() {
   const currentArticlesList = articlesList;

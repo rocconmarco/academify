@@ -1,4 +1,11 @@
+import { Metadata } from 'next';
 import React from 'react'
+
+export const metadata: Metadata = {
+    title: "Certify - Academify",
+    description:
+      "Top-level knowledge shared by the most authoritative sources, powered by blockchain technology.",
+  };
 
 const CertifyPage = () => {
   return (
