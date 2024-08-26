@@ -88,31 +88,31 @@ If you’re interested in the project, feel free to contact me via the "Contacts
 
 ## Specs for nerds
 
-The project was developed using the React framework Next.js, in order to avoid compatibility issues with various dependencies, as experienced in the past with React Native.
+The project was developed using the React framework <strong>Next.js</strong>, in order to <strong>avoid compatibility issues<strong> with various dependencies, as experienced in the past with React Native.
 
 <br>
 
-Tailwind CSS was used for styling, with TypeScript providing robust type safety throughout the project.
+<strong>Tailwind CSS</strong> was used for styling, with <strong>TypeScript</strong> providing robust type safety throughout the project.
 
 <br>
 
-Page routing was handled using Next.js's App Router, where each route is represented by a folder within the main “app” directory, and each page is represented by a page.tsx file.
+Page routing was handled using Next.js's <strong>App Router</strong>, where each route is represented by a folder within the main “app” directory, and each page is represented by a page.tsx file.
 
 <br>
 
-To ensure content decentralization on the platform, I opted for Web3.Storage, a service that allows articles to be uploaded to the IPFS network, generating a corresponding CID. This CID enables users to access the content after making a payment.
+To ensure content decentralization on the platform, I opted for <strong>web3.storage</strong>, a service that allows articles to be uploaded to the <strong>IPFS network</strong>, generating a corresponding CID. This CID enables users to access the content after making a payment.
 
 <br>
 
-The payment process is managed by a simple smart contract written in Solidity. It ensures that every payment sent to the contract is redirected to the wallet of the contract owner (as required by the project guidelines). This will be modified with future updates to allow each author to receive payments for their own articles.
+The payment process is managed by a simple <strong>smart contract written in Solidity</strong>. It ensures that every payment sent to the contract is redirected to the wallet of the contract owner (as required by the project guidelines). This will be modified with future updates to allow each author to receive payments for their own articles.
 
 <br>
 
-Transactions are executed on the Sepolia testnet using the SepoliaETH test token.
+Transactions are executed on the <strong>Sepolia testnet</strong> using the <strong>SepoliaETH test token</strong>.
 
 <br>
 
-To integrate the smart contract and handle user authentication, I opted for Wagmi. This decision was driven by its user-friendly interface and the streamlined management of information through its specialized hooks, which seamlessly support the four wallet connectors available on the platform.
+To integrate the smart contract and handle user authentication, I opted for <strong>Wagmi</strong>. This decision was driven by its user-friendly interface and the streamlined management of information through its specialized hooks, which seamlessly support the <strong>four wallet connectors</strong> available on the platform.
 
 <br />
 
