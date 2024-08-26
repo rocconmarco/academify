@@ -88,7 +88,7 @@ If you’re interested in the project, feel free to contact me via the "Contacts
 
 ## Specs for nerds
 
-The project was developed using the React framework <strong>Next.js</strong>, in order to <strong>avoid compatibility issues<strong> with various dependencies, as experienced in the past with React Native.
+The project was developed using the React framework <strong>Next.js</strong>, in order to <strong>avoid compatibility issues</strong> with various dependencies, as experienced in the past with React Native.
 
 <br>
 
